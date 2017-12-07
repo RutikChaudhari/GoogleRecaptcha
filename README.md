@@ -63,9 +63,7 @@ Paste the reCAPTCHA code on the submitted page where you want the response messa
         // If CAPTCHA is successfully completed...<br>
         // Paste mail function or whatever else you want to happen here!<br>
         echo '<p>CAPTCHA was completed successfully!</p>';
-    }
-?><br>
-
+    }?><br>
 Step 5 :-
 Congratulations !! You have made it.
 Now use recaptcha in any program by following above steps.
