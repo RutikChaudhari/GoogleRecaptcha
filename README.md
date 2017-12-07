@@ -23,8 +23,8 @@ Paste the following code in header of your file where you want to implement goog
  <script src='https://www.google.com/recaptcha/api.js'></script> 
 
 Step 4.2 :-
-Paste this code in the form where you want the widget (google reCaptcha with checkbox) to appear:<br>
-<!-- <div class='g-recaptcha' data-sitekey='____paste your site key___'></div> -->
+Paste this code in the form where you want the widget to appear: <br>
+<div class='g-recaptcha' data-sitekey='____paste your site key___'></div>
 
 Step 4.3 :-
 Paste the reCAPTCHA code on the submitted page where you want the response message to show:
@@ -64,8 +64,8 @@ Paste the reCAPTCHA code on the submitted page where you want the response messa
         // If CAPTCHA is successfully completed...<br>
 
         // Paste mail function or whatever else you want to happen here!<br>
-        echo '<br><p>CAPTCHA was completed successfully!</p><br>';<br>
-    }<br>
+        echo '<br><p>CAPTCHA was completed successfully!</p><br>';
+    }
 ?><br>
 
 Step 5 :-
