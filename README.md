@@ -58,11 +58,11 @@ Paste the reCAPTCHA code on the submitted page where you want the response messa
     if (!$res['success']) {<br>
     
     // What happens when the CAPTCHA wasn't checked<br>
-      echo '<p>Please go back and make sure you check the security CAPTCHA box.</p>';<br>
+      echo '< p >Please go back and make sure you check the security CAPTCHA box.< /p >';<br>
  } <br>else{<br>
         // If CAPTCHA is successfully completed...<br>
         // Paste mail function or whatever else you want to happen here!<br>
-        echo '<p>CAPTCHA was completed successfully!</p>';
+        echo '< p > CAPTCHA was completed successfully!< /p >';
     }?><br>
 Step 5 :-
 Congratulations !! You have made it.
