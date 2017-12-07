@@ -4,7 +4,7 @@ Google reCAPTCHA is a free service that protects your site from spam and abuse. 
 Steps to implement in your program :
 
 Step 1 :- 
-Go on this link :- https://www.google.com/recaptcha/intro
+Go on this link :- https://www.google.com/recaptcha/intro/
 
 Step 2 :-
 Click on "Get reCaptcha" button
