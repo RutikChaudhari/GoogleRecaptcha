@@ -33,8 +33,8 @@ function post_captcha($user_response) {
     }
 
     $res = post_captcha($_POST['g-recaptcha-response']);
+    
     if ($res['success']) {
-        $a=$res['success'];
         echo '<script>alert("Successfull");</script>';
     } else {
         echo '<script>alert("Error");</script>';
