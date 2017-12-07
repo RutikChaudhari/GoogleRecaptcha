@@ -23,7 +23,7 @@ Paste the following code in header of your file where you want to implement goog
  <script src='https://www.google.com/recaptcha/api.js'></script> 
 
 Step 4.2 :-
-Paste this code in the form where you want the widget to appear:div class="g-recaptcha" data-sitekey="your site key"></div
+Paste this code in the form where you want the widget to appear: < div class='g-recaptcha' data-sitekey='your site key' >< /div >
 
 Step 4.3 :-
 Paste the reCAPTCHA code on the submitted page where you want the response message to show:
