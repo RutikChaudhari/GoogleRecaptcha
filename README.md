@@ -31,6 +31,7 @@ Paste the reCAPTCHA code on the submitted page where you want the response messa
 
 <?php
     function post_captcha($user_response) {
+  
         $fields_string = '';
         $fields = array(
             'secret' => '**** Paste your secret code  ****'
@@ -53,12 +54,14 @@ Paste the reCAPTCHA code on the submitted page where you want the response messa
     }
 
     // Call the function post_captcha
+    
     $res = post_captcha($_POST['g-recaptcha-response']);
 
     if (!$res['success']) {
-        // What happens when the CAPTCHA wasn't checked
-        echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';
-    } else {
+    
+    // What happens when the CAPTCHA wasn't checked
+      echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';
+ } else {
         // If CAPTCHA is successfully completed...
 
         // Paste mail function or whatever else you want to happen here!
