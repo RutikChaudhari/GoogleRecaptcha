@@ -19,55 +19,54 @@ Click on keys tab which contains two keys :
 i) Site key and ii) Secret key
 
 Step 4.1 :-
-Paste the following code in header of your file where you want to implement google captcha:
-<script src='https://www.google.com/recaptcha/api.js'></script> 
+Paste the following code in header of your file where you want to implement google captcha:<br>
+ <script src='https://www.google.com/recaptcha/api.js'></script> 
 
 Step 4.2 :-
-Paste this code in the form where you want the widget (google reCaptcha with checkbox) to appear:
-<div class="g-recaptcha" data-sitekey="******************paste your site key****************"></div>
+Paste this code in the form where you want the widget (google reCaptcha with checkbox) to appear:<br>
+<!-- <div class='g-recaptcha' data-sitekey='____paste your site key___'></div> -->
 
 Step 4.3 :-
 Paste the reCAPTCHA code on the submitted page where you want the response message to show:
-
-<?php
-    function post_captcha($user_response) {
-  
-        $fields_string = '';
+<br>
+<?php<br>
+    function post_captcha($user_response) {<br>
+        $fields_string = '';<br>
         $fields = array(
-            'secret' => '**** Paste your secret code  ****'
+            'secret' => '___Paste your secret code____',
             'response' => $user_response
-        );
-        foreach($fields as $key=>$value)
-        $fields_string .= $key . '=' . $value . '&';
-        $fields_string = rtrim($fields_string, '&');
+        );<br>
+        foreach($fields as $key=>$value)<br>
+        $fields_string .= $key . '=' . $value . '&';<br>
+        $fields_string = rtrim($fields_string, '&');<br>
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
-        curl_setopt($ch, CURLOPT_POST, count($fields));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
+        $ch = curl_init();<br>
+        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');<br>
+        curl_setopt($ch, CURLOPT_POST, count($fields));<br>
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);<br>
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);<br>
 
-        $result = curl_exec($ch);
-        curl_close($ch);
+        $result = curl_exec($ch);<br>
+        curl_close($ch);<br>
 
-        return json_decode($result, true);
-    }
+        return json_decode($result, true);<br>
+    }<br>
 
-    // Call the function post_captcha
+    // Call the function post_captcha<br>
     
-    $res = post_captcha($_POST['g-recaptcha-response']);
+    $res = post_captcha($_POST['g-recaptcha-response']);<br>
 
-    if (!$res['success']) {
+    if (!$res['success']) {<br>
     
-    // What happens when the CAPTCHA wasn't checked
-      echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';
- } else {
-        // If CAPTCHA is successfully completed...
+    // What happens when the CAPTCHA wasn't checked<br>
+      echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';<br>
+ } <br>else {<br>
+        // If CAPTCHA is successfully completed...<br>
 
-        // Paste mail function or whatever else you want to happen here!
-        echo '<br><p>CAPTCHA was completed successfully!</p><br>';
-    }
-?>
+        // Paste mail function or whatever else you want to happen here!<br>
+        echo '<br><p>CAPTCHA was completed successfully!</p><br>';<br>
+    }<br>
+?><br>
 
 Step 5 :-
 Congratulations !! You have made it.
